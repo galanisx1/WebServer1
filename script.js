@@ -2,7 +2,8 @@ document.getElementById('sendButton').addEventListener('click', async () => {
     const userInput = document.getElementById('userInput').value;
 
     try {
-        const response = await fetch('/api/process', {  // Ruta relativa
+        // Usa la ruta relativa para el endpoint
+        const response = await fetch('/api/process', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -17,3 +18,4 @@ document.getElementById('sendButton').addEventListener('click', async () => {
         console.error('Error al enviar la solicitud:', error);
     }
 });
+
