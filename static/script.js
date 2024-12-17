@@ -2,7 +2,8 @@ document.getElementById('sendButton').addEventListener('click', async () => {
     const userInput = document.getElementById('userInput').value;
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/api/process', {
+        // Usa la ruta relativa para el endpoint
+        const response = await fetch('/api/process', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
